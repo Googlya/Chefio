@@ -68,6 +68,7 @@ fileprivate struct UIKitSecureField: UIViewRepresentable {
         textField.setContentHuggingPriority(.defaultHigh, for: .vertical)
         textField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         textField.placeholder = NSLocalizedString(titleKey, comment: "")
+        textField.textColor = UIColor(named: "mainText") ?? UIColor.gray
         textField.attributedPlaceholder = NSAttributedString(
             string: titleKey,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "secondaryText") ?? UIColor.gray]
