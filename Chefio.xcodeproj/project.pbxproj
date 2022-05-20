@@ -11,6 +11,15 @@
 		1A177EA0283648FD00A2357B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A177E9F283648FD00A2357B /* ContentView.swift */; };
 		1A177EA2283648FE00A2357B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A177EA1283648FE00A2357B /* Assets.xcassets */; };
 		1A177EA5283648FE00A2357B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A177EA4283648FE00A2357B /* Preview Assets.xcassets */; };
+		1A177EB02836494300A2357B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A177EAF2836494300A2357B /* Colors.xcassets */; };
+		1A177EB228364A4400A2357B /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A177EB128364A4300A2357B /* Font+Custom.swift */; };
+		1A177EB428364BFB00A2357B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A177EB328364BFB00A2357B /* OnboardingView.swift */; };
+		1A177EB728364D8000A2357B /* ButtonConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A177EB628364D8000A2357B /* ButtonConstructor.swift */; };
+		1A177EB92836505D00A2357B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A177EB82836505D00A2357B /* SignInView.swift */; };
+		1A177ED72837722700A2357B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A177ED62837722700A2357B /* CustomTextField.swift */; };
+		1A177ED928378AA900A2357B /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A177ED828378AA900A2357B /* CustomSecureField.swift */; };
+		1A177EDD2837937B00A2357B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A177EDC2837937B00A2357B /* SignUpView.swift */; };
+		1A177EDF28379AAE00A2357B /* ValidationButtonConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A177EDE28379AAE00A2357B /* ValidationButtonConstructor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		1A177E9F283648FD00A2357B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A177EA1283648FE00A2357B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A177EA4283648FE00A2357B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A177EAF2836494300A2357B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1A177EB128364A4300A2357B /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
+		1A177EB328364BFB00A2357B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		1A177EB628364D8000A2357B /* ButtonConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConstructor.swift; sourceTree = "<group>"; };
+		1A177EB82836505D00A2357B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		1A177ED62837722700A2357B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		1A177ED828378AA900A2357B /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		1A177EDC2837937B00A2357B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1A177EDE28379AAE00A2357B /* ValidationButtonConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationButtonConstructor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +69,10 @@
 		1A177E9C283648FD00A2357B /* Chefio */ = {
 			isa = PBXGroup;
 			children = (
-				1A177E9D283648FD00A2357B /* ChefioApp.swift */,
-				1A177E9F283648FD00A2357B /* ContentView.swift */,
-				1A177EA1283648FE00A2357B /* Assets.xcassets */,
+				1A177EAE2836491900A2357B /* Resource */,
+				1A177EAD2836491400A2357B /* Model */,
+				1A177EAC2836490F00A2357B /* ViewModel */,
+				1A177EAB2836490800A2357B /* View */,
 				1A177EA3283648FE00A2357B /* Preview Content */,
 			);
 			path = Chefio;
@@ -65,6 +84,54 @@
 				1A177EA4283648FE00A2357B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A177EAB2836490800A2357B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A177EB528364D3800A2357B /* Elements */,
+				1A177E9F283648FD00A2357B /* ContentView.swift */,
+				1A177EB328364BFB00A2357B /* OnboardingView.swift */,
+				1A177EB82836505D00A2357B /* SignInView.swift */,
+				1A177EDC2837937B00A2357B /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A177EAC2836490F00A2357B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1A177EAD2836491400A2357B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A177EAE2836491900A2357B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1A177E9D283648FD00A2357B /* ChefioApp.swift */,
+				1A177EA1283648FE00A2357B /* Assets.xcassets */,
+				1A177EAF2836494300A2357B /* Colors.xcassets */,
+				1A177EB128364A4300A2357B /* Font+Custom.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1A177EB528364D3800A2357B /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				1A177EB628364D8000A2357B /* ButtonConstructor.swift */,
+				1A177EDE28379AAE00A2357B /* ValidationButtonConstructor.swift */,
+				1A177ED62837722700A2357B /* CustomTextField.swift */,
+				1A177ED828378AA900A2357B /* CustomSecureField.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A177EB02836494300A2357B /* Colors.xcassets in Resources */,
 				1A177EA5283648FE00A2357B /* Preview Assets.xcassets in Resources */,
 				1A177EA2283648FE00A2357B /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +205,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A177ED928378AA900A2357B /* CustomSecureField.swift in Sources */,
+				1A177ED72837722700A2357B /* CustomTextField.swift in Sources */,
+				1A177EB92836505D00A2357B /* SignInView.swift in Sources */,
+				1A177EDF28379AAE00A2357B /* ValidationButtonConstructor.swift in Sources */,
+				1A177EB228364A4400A2357B /* Font+Custom.swift in Sources */,
+				1A177EB428364BFB00A2357B /* OnboardingView.swift in Sources */,
 				1A177EA0283648FD00A2357B /* ContentView.swift in Sources */,
 				1A177E9E283648FD00A2357B /* ChefioApp.swift in Sources */,
+				1A177EDD2837937B00A2357B /* SignUpView.swift in Sources */,
+				1A177EB728364D8000A2357B /* ButtonConstructor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -275,6 +351,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +381,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
