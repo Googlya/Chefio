@@ -27,22 +27,22 @@ struct HomeView: View {
             
             BodyHome()
                 .frame(maxHeight: .infinity, alignment: .center)
-                .gesture(
-                    DragGesture()
-                        .onChanged({ gesture in
-                            offsetY = gesture.translation.height
-                            print(offsetY)
-                            if offsetY < -5 {
-                                withAnimation {
-                                    showHeaderAndFooter = false
-                                }
-                            } else {
-                                withAnimation {
-                                    showHeaderAndFooter = true
-                                }
-                            }
-                        })
-                )
+//                .gesture(
+//                    DragGesture()
+//                        .onChanged({ gesture in
+//                            offsetY = gesture.translation.height
+//                            print(offsetY)
+//                            if offsetY < -5 {
+//                                withAnimation {
+//                                    showHeaderAndFooter = false
+//                                }
+//                            } else {
+//                                withAnimation {
+//                                    showHeaderAndFooter = true
+//                                }
+//                            }
+//                        })
+//                )
             
             FooterView()
                 .offset(y: showHeaderAndFooter ? 0.0 : 400)
@@ -78,7 +78,7 @@ fileprivate struct HeaderHome: View {
 }
 
 fileprivate struct BodyHome: View {
-    @State var mockItem: ReceiptModel = ReceiptModel(id: 1, title: "Test", image: "https://html5css.ru/css/img_lights.jpg", category: .food, time: 30, author: AuthorModel(id: 1, image: "https://html5css.ru/css/img_lights.jpg", name: "Abama"))
+    @State var mockItem: RecipeModel = RecipeModel(id: 1, title: "Test", image: "https://html5css.ru/css/img_lights.jpg", category: .food, time: 30, author: AuthorModel(id: 1, image: "https://html5css.ru/css/img_lights.jpg", name: "Abama"))
     
     @State var gridItems: [GridItem] = [GridItem(.flexible(), spacing: 10, alignment: .leading), GridItem(.flexible(), spacing: 10, alignment: .leading)]
     
@@ -86,7 +86,7 @@ fileprivate struct BodyHome: View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: gridItems, alignment: .center, spacing: 10) {
                 ForEach(0...20, id: \.self) {_ in
-                    ReceiptView(item: mockItem)
+                    RecipeBlockView(item: mockItem)
                 }
             }
             .padding(.horizontal)

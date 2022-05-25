@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ReceiptView: View {
-    @State var item: ReceiptModel
+struct RecipeBlockView: View {
+    @State var item: RecipeModel
     
     var body: some View {
         VStack(alignment: .leading){
@@ -57,6 +57,6 @@ struct ReceiptView: View {
 
 struct ReceiptView_Previews: PreviewProvider {
     static var previews: some View {
-        ReceiptView(item: ReceiptModel(id: 1, title: "Test", image: "https://html5css.ru/css/img_lights.jpg", category: .food, time: 30, author: AuthorModel(id: 1, image: "https://html5css.ru/css/img_lights.jpg", name: "Abama")))
+        RecipeBlockView(item: RecipeModel(id: 1, title: "Test", image: "https://html5css.ru/css/img_lights.jpg", category: .food, time: 30, author: AuthorModel(id: 1, image: "https://html5css.ru/css/img_lights.jpg", name: "Abama")))
     }
 }

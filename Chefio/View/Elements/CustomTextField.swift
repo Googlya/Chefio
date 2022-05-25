@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomTextField: View {
     @State var placeholder: String
     @Binding var text: String
-    @State var imageName: String
+    @State var imageName: String?
     
     var body: some View {
         UIKitTextField(placeholder, text: $text)
@@ -21,12 +21,14 @@ struct CustomTextField: View {
 
 
 fileprivate struct textFieldModifier: ViewModifier {
-    @State var imageName: String
+    @State var imageName: String?
     
     func body(content: Content) -> some View {
         HStack{
-            Image(systemName: imageName)
-                .foregroundColor(Color("mainText"))
+            if imageName != nil {
+                Image(systemName: imageName!)
+                    .foregroundColor(Color("mainText"))
+            }
             content
                 .padding(.vertical, 8)
         }

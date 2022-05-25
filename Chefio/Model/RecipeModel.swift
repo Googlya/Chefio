@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ReceiptModel {
+struct RecipeModel {
     var id: Int
     var title: String
     var image: String

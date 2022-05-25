@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthorModel {
+struct AuthorModel: Hashable {
     var id: Int
     var image: String
     var name: String
