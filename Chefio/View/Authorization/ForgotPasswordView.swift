@@ -14,12 +14,12 @@ struct ForgotPasswordView: View {
     var body: some View {
         VStack{
             Text("Password recovery")
-                .foregroundColor(Color("mainText"))
+                .foregroundColor(AppColor.mainText.color)
                 .font(.h1)
                 .padding()
             
             Text("Enter your email to recover your password")
-                .foregroundColor(Color("secondaryText"))
+                .foregroundColor(AppColor.secondaryText.color)
                 .font(.p2)
                 .multilineTextAlignment(.center)
                 .padding()

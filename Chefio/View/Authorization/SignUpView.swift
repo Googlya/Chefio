@@ -18,12 +18,12 @@ struct SignUpView: View {
     var body: some View {
         VStack{
             Text("Welcome!")
-                .foregroundColor(Color("mainText"))
+                .foregroundColor(AppColor.mainText.color)
                 .font(.h1)
                 .padding()
             
             Text("Please enter your account here")
-                .foregroundColor(Color("secondaryText"))
+                .foregroundColor(AppColor.secondaryText.color)
                 .font(.p2)
                 .padding(.vertical)
             
@@ -35,24 +35,24 @@ struct SignUpView: View {
             
             VStack(alignment: .leading){
                 Text("Your Password must contain:")
-                    .foregroundColor(Color("mainText"))
+                    .foregroundColor(AppColor.mainText.color)
                     .font(.p1)
                 
                 HStack{
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(passSixCharacters ? Color("primary") : Color("secondaryText"))
+                        .foregroundColor(passSixCharacters ? AppColor.primary.color : AppColor.secondaryText.color)
                     
                     Text("Atleast 6 characters")
-                        .foregroundColor(passSixCharacters ? Color("mainText") : Color("secondaryText"))
+                        .foregroundColor(passSixCharacters ? AppColor.mainText.color : AppColor.secondaryText.color)
                 }
                 .padding(.top)
 
                 HStack{
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(passContainsNumber ? Color("primary") : Color("secondaryText"))
+                        .foregroundColor(passContainsNumber ? AppColor.primary.color : AppColor.secondaryText.color)
                     
                     Text("Contains a number")
-                        .foregroundColor(passContainsNumber ? Color("mainText") : Color("secondaryText"))
+                        .foregroundColor(passContainsNumber ? AppColor.mainText.color : AppColor.secondaryText.color)
                 }
                 .padding(.top)
             }

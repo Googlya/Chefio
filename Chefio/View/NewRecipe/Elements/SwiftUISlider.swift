@@ -36,6 +36,8 @@ struct CustomSlider: UIViewRepresentable {
         slider.minimumTrackTintColor = minTrackColor
         slider.maximumTrackTintColor = maxTrackColor
         slider.value = Float(value)
+        slider.minimumValue = Float(minimumValue)
+        slider.maximumValue = Float(maximumValue)
         
         slider.addTarget(
             context.coordinator,

@@ -25,7 +25,7 @@ struct VerificationField: View {
             ForEach(0..<4) { index in
                 if pins.count < index || pins[index] == "" {
                     Text("_")
-                        .foregroundColor(Color("secondaryText"))
+                        .foregroundColor(AppColor.secondaryText.color)
                         .font(.system(size: 34, weight: .medium, design: .default))
                         .padding()
                         .padding(.horizontal)
@@ -33,18 +33,18 @@ struct VerificationField: View {
                             
                             RoundedRectangle(cornerRadius: 12)
                                 .stroke(lineWidth: 1.0)
-                                .foregroundColor(Color("secondaryText"))
+                                .foregroundColor(AppColor.secondaryText.color)
                         )
                 } else {
                     Text("\(String(pins[index]))")
-                        .foregroundColor(Color("mainText"))
+                        .foregroundColor(AppColor.mainText.color)
                         .font(.system(size: 34, weight: .bold, design: .default))
                         .padding()
                         .padding(.horizontal)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
                                 .stroke(lineWidth: 1.0)
-                                .foregroundColor(Color("primary"))
+                                .foregroundColor(AppColor.primary.color)
                         )
                 }
             }

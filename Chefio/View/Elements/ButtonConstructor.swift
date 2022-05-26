@@ -11,6 +11,7 @@ struct ButtonConstructor: View {
     
     @State var text: String
     @State var fullWidth: Bool
+    @State var backgroundColor: AppColor
     @State var function: ()->Void
     
     var body: some View {
@@ -32,7 +33,7 @@ struct ButtonConstructor: View {
                     Spacer()
                 }
             }
-            .background(Color("primary"))
+            .background(backgroundColor.color)
             .cornerRadius(32.0)
         }
         .padding(.horizontal)
@@ -42,7 +43,7 @@ struct ButtonConstructor: View {
 
 struct ButtonConstructor_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonConstructor(text: "Get Started", fullWidth: false) {
+        ButtonConstructor(text: "Get Started", fullWidth: false, backgroundColor: .primary) {
             
         }
     }

@@ -32,11 +32,11 @@ struct RecipeDescriptionView: View {
                         
                     VStack(alignment: .leading, spacing: 10){
                         Text(item.title)
-                            .foregroundColor(Color("mainText"))
+                            .foregroundColor(AppColor.mainText.color)
                             .font(.h2)
                         
                         Text("\(item.category.title) * \(item.time) mins")
-                            .foregroundColor(Color("secondaryText"))
+                            .foregroundColor(AppColor.secondaryText.color)
                             .font(.p2)
                         
                         HStack{
@@ -48,12 +48,12 @@ struct RecipeDescriptionView: View {
 
                             Text(item.author.name)
                                 .font(.h3)
-                                .foregroundColor(Color("mainText"))
+                                .foregroundColor(AppColor.mainText.color)
                             
                             Spacer()
                             
                             Text("\(item.likes) likes")
-                                .foregroundColor(Color("mainText"))
+                                .foregroundColor(AppColor.mainText.color)
                                 .font(.h3)
                         }
                     }
@@ -67,11 +67,11 @@ struct RecipeDescriptionView: View {
                     
                     VStack(alignment: .leading, spacing: 10){
                         Text("Description")
-                            .foregroundColor(Color("mainText"))
+                            .foregroundColor(AppColor.mainText.color)
                             .font(.h2)
                         
                         Text(item.description)
-                            .foregroundColor(Color("secondaryText"))
+                            .foregroundColor(AppColor.secondaryText.color)
                             .font(.p2)
                             .multilineTextAlignment(.leading)
                     }
@@ -85,7 +85,7 @@ struct RecipeDescriptionView: View {
                     
                     VStack(alignment: .leading, spacing: 10){
                         Text("Ingredients")
-                            .foregroundColor(Color("mainText"))
+                            .foregroundColor(AppColor.mainText.color)
                             .font(.h2)
                         IngredientsView(items: item.ingredients)
                     }
@@ -99,7 +99,7 @@ struct RecipeDescriptionView: View {
                     
                     VStack(alignment: .leading, spacing: 10){
                         Text("Steps")
-                            .foregroundColor(Color("mainText"))
+                            .foregroundColor(AppColor.mainText.color)
                             .font(.h2)
                         StepsView(items: item.steps)
                     }
@@ -130,15 +130,15 @@ fileprivate struct IngredientsView: View {
                 VStack(alignment: .leading, spacing: 10){
                     if ingredients.name != "general" {
                         Text(ingredients.name)
-                            .foregroundColor(Color("secondaryText"))
+                            .foregroundColor(AppColor.secondaryText.color)
                             .font(.h3)
                     }
                     ForEach(ingredients.childs, id: \.self) { child in
                         HStack{
                             Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(Color("primary"))
+                                .foregroundColor(AppColor.primary.color)
                             Text(child)
-                                .foregroundColor(Color("mainText"))
+                                .foregroundColor(AppColor.mainText.color)
                                 .font(.p2)
                         }
                     }
@@ -158,7 +158,7 @@ fileprivate struct StepsView: View {
                 HStack(alignment: .top){
                     ZStack{
                         Circle()
-                            .foregroundColor(Color("mainText"))
+                            .foregroundColor(AppColor.mainText.color)
                         Text("\(idx + 1)")
                             .foregroundColor(.white)
                             .font(.s)
@@ -167,7 +167,7 @@ fileprivate struct StepsView: View {
                     
                     VStack(alignment: .leading){
                         Text(items[idx].description)
-                            .foregroundColor(Color("mainText"))
+                            .foregroundColor(AppColor.mainText.color)
                             .font(.p2)
                             .multilineTextAlignment(.leading)
                         

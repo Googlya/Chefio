@@ -32,7 +32,7 @@ struct ValidationButtonConstructor: View {
                     Spacer()
                 }
             }
-            .background(valid ? Color("primary") : Color("outline"))
+            .background(valid ? AppColor.primary.color : AppColor.outline.color)
             .cornerRadius(32.0)
         }
         .disabled(!valid)

@@ -31,20 +31,20 @@ struct RecipeBlockView: View {
 
             Text(item.title)
                 .font(.h2)
-                .foregroundColor(Color("mainText"))
+                .foregroundColor(AppColor.mainText.color)
             
             HStack{
                 Text(item.category.title)
                     .font(.s)
-                    .foregroundColor(Color("secondaryText"))
+                    .foregroundColor(AppColor.secondaryText.color)
 
                 Circle()
-                    .foregroundColor(Color("secondaryText"))
+                    .foregroundColor(AppColor.secondaryText.color)
                     .frame(width: 5, height: 5, alignment: .center)
                 
                 Text("\(item.time)")
                     .font(.s)
-                    .foregroundColor(Color("secondaryText"))
+                    .foregroundColor(AppColor.secondaryText.color)
 
             }
         }

@@ -21,12 +21,12 @@ struct SignInView: View {
                 Spacer()
                 
                 Text("Welcome Back!")
-                    .foregroundColor(Color("mainText"))
+                    .foregroundColor(AppColor.mainText.color)
                     .font(.h1)
                     .padding()
                 
                 Text("Please enter your account here")
-                    .foregroundColor(Color("secondaryText"))
+                    .foregroundColor(AppColor.secondaryText.color)
                     .font(.p2)
                     .padding()
                 
@@ -42,7 +42,7 @@ struct SignInView: View {
                         
                     } label: {
                         Text("Forgot password?")
-                            .foregroundColor(Color("mainText"))
+                            .foregroundColor(AppColor.mainText.color)
                             .font(.p2)
                             .padding()
                     }
@@ -52,7 +52,7 @@ struct SignInView: View {
                 
                 Spacer()
                 
-                ButtonConstructor(text: "Login", fullWidth: true) {
+                ButtonConstructor(text: "Login", fullWidth: true, backgroundColor: .primary) {
                     //login
                     withAnimation {
                         startLogin.toggle()
@@ -65,10 +65,10 @@ struct SignInView: View {
                 } label: {
                     HStack{
                         Text("Don’t have any account?")
-                            .foregroundColor(Color("mainText"))
+                            .foregroundColor(AppColor.mainText.color)
                             .font(.p2)
                         Text("Sign Up")
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
                             .font(.h3)
                     }
                     .frame(height: 44, alignment: .center)

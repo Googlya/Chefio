@@ -20,7 +20,7 @@ struct HomeView: View {
                     .padding()
                 
                 RoundedRectangle(cornerRadius: 0)
-                    .foregroundColor(Color("form"))
+                    .foregroundColor(AppColor.form.color)
                     .frame(height: 7, alignment: .center)
             }
             .offset(y: showHeaderAndFooter ? 0.0 : -400)
@@ -58,7 +58,7 @@ fileprivate struct HeaderHome: View {
         VStack(alignment: .leading){
             //Search button
             Text("Category:")
-                .foregroundColor(Color("mainText"))
+                .foregroundColor(AppColor.mainText.color)
                 .font(.h1)
 
             

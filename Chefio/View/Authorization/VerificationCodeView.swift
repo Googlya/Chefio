@@ -14,12 +14,12 @@ struct VerificationCodeView: View {
     var body: some View {
         VStack{
             Text("Check your email")
-                .foregroundColor(Color("mainText"))
+                .foregroundColor(AppColor.mainText.color)
                 .font(.h1)
                 .padding()
             
             Text("We.ve sent the code to your email")
-                .foregroundColor(Color("secondaryText"))
+                .foregroundColor(AppColor.secondaryText.color)
                 .font(.p2)
                 .padding()
             

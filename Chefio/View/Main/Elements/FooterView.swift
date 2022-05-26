@@ -11,7 +11,7 @@ struct FooterView: View {
     var body: some View {
         VStack(spacing: 0){
             RoundedRectangle(cornerRadius: 0)
-                .foregroundColor(Color("form"))
+                .foregroundColor(AppColor.form.color)
                 .frame(height: 1, alignment: .center)
             HStack{
                 Button {
@@ -20,10 +20,10 @@ struct FooterView: View {
                     VStack{
                         Image(systemName: "house.fill")
                             .font(.h1)
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
 
                         Text("Home")
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
                             .font(.p1)
                     }
                 }
@@ -36,10 +36,10 @@ struct FooterView: View {
                     VStack{
                         Image(systemName: "pencil.circle.fill")
                             .font(.h1)
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
                         
                         Text("Upload")
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
                             .font(.p1)
                     }
                 }
@@ -52,10 +52,10 @@ struct FooterView: View {
                     VStack{
                         Image(systemName: "bell.fill")
                             .font(.h1)
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
                         
                         Text("Notification")
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
                             .font(.p1)
                     }
                 }
@@ -68,10 +68,10 @@ struct FooterView: View {
                     VStack{
                         Image(systemName: "person.fill")
                             .font(.h1)
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
                         
                         Text("Profile")
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
                             .font(.p1)
                     }
                 }

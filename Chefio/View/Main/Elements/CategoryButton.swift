@@ -20,11 +20,11 @@ struct CategoryButton: View {
             HStack{
                 Text(category.title)
                     .font(.h2)
-                    .foregroundColor(activeCategory == category ? .white : Color("secondaryText"))
+                    .foregroundColor(activeCategory == category ? .white : AppColor.secondaryText.color)
                     .padding()
                     .padding(.horizontal, 8)
             }
-            .background(activeCategory == category ? Color("primary") : Color("form"))
+            .background(activeCategory == category ? AppColor.primary.color : AppColor.form.color)
             .cornerRadius(32.0)
         }
     }

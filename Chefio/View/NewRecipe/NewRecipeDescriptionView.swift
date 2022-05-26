@@ -8,8 +8,77 @@
 import SwiftUI
 
 struct NewRecipeDescriptionView: View {
+    @State var ingridients: [IngredientsGroupModel] = [IngredientsGroupModel(name: "general", childs: [""])]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(spacing: 8){
+                HStack{
+                    Button {
+                        //route
+                    } label: {
+                        Text("Cancel")
+                            .foregroundColor(AppColor.secondary.color)
+                            .font(.h2)
+                    }
+                    
+                    Spacer()
+                    
+                    Text("2/").foregroundColor(AppColor.mainText.color).font(.h2) + Text("2").foregroundColor(AppColor.secondaryText.color).font(.h2)
+                }
+                .padding(.horizontal)
+                
+                VStack{
+                    HStack{
+                        Text("Ingredients")
+                            .foregroundColor(AppColor.mainText.color)
+                            .font(.h2)
+                        
+                        Spacer()
+                        
+                        Button {
+                            
+                        } label: {
+                            HStack{
+                                Image(systemName: "plus")
+                                    .foregroundColor(AppColor.mainText.color)
+                                
+                                Text("Group")
+                                    .foregroundColor(AppColor.mainText.color)
+                                    .font(.p2)
+                            }
+                        }
+                        
+                    }
+                }
+                .padding(.horizontal)
+                
+                RoundedRectangle(cornerRadius: 0)
+                    .foregroundColor(AppColor.form.color)
+                    .frame(height: 7, alignment: .center)
+                
+                VStack(alignment: .leading){
+                    HStack{
+                        Text("Steps")
+                            .foregroundColor(AppColor.mainText.color)
+                            .font(.h2)
+                        
+                        Spacer()
+                    }
+                }
+                .padding(.horizontal)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+
+        }
+    }
+}
+
+fileprivate struct IngridientsView: View {
+    var body: some View {
+        VStack{
+            
+        }
     }
 }
 

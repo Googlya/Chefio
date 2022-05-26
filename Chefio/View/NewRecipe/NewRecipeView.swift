@@ -19,13 +19,13 @@ struct NewRecipeView: View {
                     //route
                 } label: {
                     Text("Cancel")
-                        .foregroundColor(Color("secondary"))
+                        .foregroundColor(AppColor.secondary.color)
                         .font(.h2)
                 }
                 
                 Spacer()
                 
-                Text("1/").foregroundColor(Color("mainText")).font(.h2) + Text("2").foregroundColor(Color("secondaryText")).font(.h2)
+                Text("1/").foregroundColor(AppColor.mainText.color).font(.h2) + Text("2").foregroundColor(AppColor.secondaryText.color).font(.h2)
             }
             .padding(.horizontal)
             
@@ -36,15 +36,15 @@ struct NewRecipeView: View {
                 ZStack{
                     RoundedRectangle(cornerRadius: 16.0)
                         .strokeBorder(style: StrokeStyle(lineWidth: 1.0, lineJoin: .round, dash: [10], dashPhase: 0))
-                        .foregroundColor(Color("outline"))
+                        .foregroundColor(AppColor.outline.color)
                     
                     VStack{
                         Text("Add Cover Photo")
-                            .foregroundColor(Color("mainText"))
+                            .foregroundColor(AppColor.mainText.color)
                             .font(.h3)
                         
                         Text("(up to 12 Mb)")
-                            .foregroundColor(Color("secondaryText"))
+                            .foregroundColor(AppColor.secondaryText.color)
                             .font(.s)
                     }
                 }
@@ -54,7 +54,7 @@ struct NewRecipeView: View {
             
             VStack(alignment: .leading){
                 Text("Food Name")
-                    .foregroundColor(Color("mainText"))
+                    .foregroundColor(AppColor.mainText.color)
                     .font(.h2)
                 
                 CustomTextField(placeholder: "Enter food name", text: $foodName)
@@ -63,34 +63,34 @@ struct NewRecipeView: View {
             
             VStack(alignment: .leading){
                 Text("Description")
-                    .foregroundColor(Color("mainText"))
+                    .foregroundColor(AppColor.mainText.color)
                     .font(.h2)
                 
                 TextEditor(text: $foodDescription)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16.0)
                             .stroke(lineWidth: 1.0)
-                            .foregroundColor(Color("outline"))
+                            .foregroundColor(AppColor.outline.color)
                     )
             }
             .padding()
             
             VStack(alignment: .leading){
-                Text("Cooking Duration ").foregroundColor(Color("mainText")).font(.h2) + Text("(in minutes)").foregroundColor(Color("secondaryText")).font(.p1)
+                Text("Cooking Duration ").foregroundColor(AppColor.mainText.color).font(.h2) + Text("(in minutes)").foregroundColor(AppColor.secondaryText.color).font(.p1)
                 
                 VStack{
                     HStack{
                         Text("<10")
                             .font(.h3)
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(AppColor.primary.color)
                         Spacer()
                         Text("30")
                             .font(.h3)
-                            .foregroundColor(foodTime >= 30 ? Color("primary") : Color("secondaryText"))
+                            .foregroundColor(foodTime >= 30 ? AppColor.primary.color : AppColor.secondaryText.color)
                         Spacer()
                         Text(">60")
                             .font(.h3)
-                            .foregroundColor(foodTime >= 60 ? Color("primary") : Color("secondaryText"))
+                            .foregroundColor(foodTime >= 60 ? AppColor.primary.color : AppColor.secondaryText.color)
                     }
                     CustomSlider(minimumValue: 10.0, maximumValue: 60.0, thumbColor: UIColor(Color("primary")), minTrackColor: UIColor(Color("primary")), maxTrackColor: UIColor(Color("outline")), value: $foodTime)
                         .foregroundColor(Color("primary"))
@@ -99,7 +99,7 @@ struct NewRecipeView: View {
             }
             .padding()
             
-            ButtonConstructor(text: "Next", fullWidth: true) {
+            ButtonConstructor(text: "Next", fullWidth: true, backgroundColor: .primary) {
                 
             }
 

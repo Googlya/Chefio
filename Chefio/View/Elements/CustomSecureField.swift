@@ -28,7 +28,7 @@ fileprivate struct secureFieldModifier: ViewModifier {
     func body(content: Content) -> some View {
         HStack{
             Image(systemName: "lock")
-                .foregroundColor(Color("mainText"))
+                .foregroundColor(AppColor.mainText.color)
             
             content
                 .padding(.vertical, 8)
@@ -37,7 +37,7 @@ fileprivate struct secureFieldModifier: ViewModifier {
                 presenter.toggle()
             } label: {
                 Image(systemName: presenter ? "eye.slash.fill" : "eye.fill")
-                    .foregroundColor(Color("secondaryText"))
+                    .foregroundColor(AppColor.secondaryText.color)
             }
 
         }
@@ -45,7 +45,7 @@ fileprivate struct secureFieldModifier: ViewModifier {
         .overlay(
             RoundedRectangle(cornerRadius: 32.0)
                 .stroke(lineWidth: 1.0)
-                .foregroundColor(valid ? Color("primary") : Color("secondaryText"))
+                .foregroundColor(valid ? AppColor.primary.color : AppColor.secondaryText.color)
         )
     }
 }

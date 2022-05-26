@@ -27,7 +27,7 @@ fileprivate struct textFieldModifier: ViewModifier {
         HStack{
             if imageName != nil {
                 Image(systemName: imageName!)
-                    .foregroundColor(Color("mainText"))
+                    .foregroundColor(AppColor.mainText.color)
             }
             content
                 .padding(.vertical, 8)
@@ -36,7 +36,7 @@ fileprivate struct textFieldModifier: ViewModifier {
         .overlay(
             RoundedRectangle(cornerRadius: 32.0)
                 .stroke(lineWidth: 1.0)
-                .foregroundColor(Color("secondaryText"))
+                .foregroundColor(AppColor.secondaryText.color)
         )
     }
     
